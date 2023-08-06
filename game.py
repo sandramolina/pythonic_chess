@@ -1,17 +1,19 @@
 import pygame
-import game_variables
+from settings import Settings
 import helpers
 
 pygame.init()
 
 pygame.display.set_caption('🐍🐍 Welcome to the Pythonic Chess 🐍🐍')
 
+# Create an instance of the Settings class
+settings = Settings()
 
 # Main game loop
 run = True
 while run:
-    game_variables.timer.tick(game_variables.fps)
-    game_variables.screen.fill('violet')
+    settings.timer.tick(settings.fps)
+    settings.screen.fill('violet')
     helpers.draw_board()
 
     # Event handling
